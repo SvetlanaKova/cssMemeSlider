@@ -1,0 +1,151 @@
+body {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+header,
+footer {
+  height: 20px;
+  display: block;
+  width: 100%;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  align-content: space-between;
+  height: 100vh;
+}
+.container {
+  background-color: black;
+  border-radius: 10px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+.mem-slider {
+  display: flex;
+  width: 43.75rem;
+  overflow: hidden;
+}
+.mem img {
+  max-height: 31.25rem;
+  width: 43.75rem;
+  border-radius: 10px;
+}
+.mem {
+  position: relative;
+  max-height: 37.5rem;
+}
+.mem-title {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+p {
+  margin-top: 45px;
+  color: white;
+  font-family: "Times New Roman", Times, serif;
+  z-index: 2;
+}
+input[name="name"] {
+  visibility: hidden;
+  position: absolute;
+  z-index: -1;
+  opacity: 0;
+}
+.mem-buttons {
+  display: flex;
+  gap: 5px;
+  padding: 20px 0 20px 400px;
+  margin-left: auto;
+  align-items: center;
+  flex-direction: row;
+  margin-top: -55px;
+  z-index: 20;
+  background-color: black;
+}
+.mem-button {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: aqua;
+  cursor: pointer;
+  transition: all 0.4s ease;
+  border-radius: 50em;
+  border: 5px solid black;
+}
+.mem-button:hover {
+  transform: scale(1.2);
+}
+ 
+@media screen and (max-width: 768px) {
+  .mem-slider {
+    max-width: 17.5rem;
+  }
+  .mem {
+    max-width: 17.5rem;
+    
+    height: 18.75rem;
+  }
+  .mem img {
+    max-width: 17.5rem;
+    max-height: 12.5rem;
+  }
+  .mem-buttons {
+      padding: 0;
+      margin-left: 0;
+      margin-top: -70px;
+  }
+  .container{
+      padding: 10px;
+      align-items: center;
+      justify-content: flex-start;
+      min-height: 18rem;
+      
+  }
+  p{
+      margin-top: 65px;
+  }
+}
+@media screen and (min-width: 1190px) {
+  .mem-slider {
+    max-width: 74,375rem;
+  }
+  .mem {
+    max-width: 74,375rem;
+  }
+  .mem img {
+    max-width: 74,375rem;
+  }
+}
+
+.mem-1 {
+  transition: all 0.6s ease;
+}
+
+#r1:checked ~ .mem-slider .mem-1 {
+  margin-left: 0%;
+}
+#r2:checked ~ .mem-slider .mem-1 {
+  margin-left: -100%;
+}
+#r3:checked ~ .mem-slider .mem-1 {
+  margin-left: -200%;
+}
+#r4:checked ~ .mem-slider .mem-1 {
+  margin-left: -300%;
+}
+#r1:checked ~ .mem-buttons > .mem-button-1 {
+  background-color: white;
+}
+#r2:checked ~ .mem-buttons > .mem-button-2 {
+  background-color: white;
+}
+#r3:checked ~ .mem-buttons > .mem-button-3 {
+  background-color: white;
+}
+#r4:checked ~ .mem-buttons > .mem-button-4 {
+  background-color: white;
+}
